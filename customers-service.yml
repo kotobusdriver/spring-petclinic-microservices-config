@@ -12,8 +12,6 @@ spring:
   config:
     activate:
       on-profile: docker
-  zipkin:
-    base-url: http://tracing-server.petclinic-namespace:9411
 server:
   port: 8081
 eureka:
