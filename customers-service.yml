@@ -6,8 +6,6 @@ eureka:
   instance:
     # enable to register multiple app instances with a random server port
     instance-id: ${spring.application.name}:${random.uuid}
-    preferIpAddress: true
-    hostname: customers-service.petclinic-namespace
 
 ---
 spring:
@@ -15,13 +13,10 @@ spring:
     activate:
       on-profile: docker
   zipkin:
-    baseUrl: http://tracing-server.petclinic-namespace:9411
+    base-url: http://tracing-server.petclinic-namespace:9411
 server:
   port: 8081
 eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-server.petclinic-namespace:8761/eureka/
-  instance:
-    preferIpAddress: true
-    hostname: customers-service.petclinic-namespace

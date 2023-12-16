@@ -21,6 +21,14 @@ spring:
       allow-override: true
       # Override configuration with any local property source
       override-none: true
+    inetutils:
+      ignoredInterfaces:
+        - docker
+        - eth.*
+        - lo
+      preferredNetworks:
+        - 173.31
+
   jpa:
     open-in-view: false
     hibernate:
