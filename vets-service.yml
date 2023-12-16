@@ -19,10 +19,10 @@ spring:
     activate:
       on-profile: docker
   zipkin:
-    baseUrl: http://tracing-server:9411
+    baseUrl: http://tracing-server.petclinic-namespace:9411
 server:
   port: 8083
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery-server:8761/eureka/
+      defaultZone: http://discovery-server.petclinic-namespace:8761/eureka/
