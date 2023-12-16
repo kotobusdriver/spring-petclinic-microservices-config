@@ -22,3 +22,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-server.petclinic-namespace:8761/eureka/
+  instance:
+    preferIpAddress: true
+    hostname: customers-service.petclinic-namespace
