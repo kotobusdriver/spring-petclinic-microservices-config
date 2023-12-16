@@ -65,9 +65,9 @@ management:
   tracing:
     sampling:
       probability: 1
-    zipkin:
-      tracing:
-        endpoint: http://tracing-server.petclinic-namespace:9411/api/v2/spans
+  zipkin:
+    tracing:
+      endpoint: http://tracing-server.petclinic-namespace:9411/api/v2/spans
 
 
 # Chaos Engineering
